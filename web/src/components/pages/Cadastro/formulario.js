@@ -36,6 +36,8 @@ function Formulario() {
     function handleSubmit(event){
       event.preventDefault();
       if(nascimento.validate() && senha.validate() && email.validate && nome != '' ){
+        saveChange()
+        alert('Cadastro Realizado com sucesso!')
         return true
       }else {
         alert('Favor Preencha todos os campos obrigatórios')
@@ -117,7 +119,7 @@ function Formulario() {
       {...senha}
       />
 
-      <button type='submit' onClick={saveChange}> Cadastrar </button>
+      <button type='submit' > Cadastrar </button>
 
       </form>
 

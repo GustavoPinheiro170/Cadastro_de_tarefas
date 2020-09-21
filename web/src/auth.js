@@ -11,7 +11,7 @@ export const isAuthenticated = () => {
             return false
             }
 
-        if(Loginemail != LoginStorage || senhaLogin != senhaStorage ){
+        if(Loginemail !== LoginStorage || senhaLogin !== senhaStorage ){
             alert('Verifique suas credencias');
             return false;
         }
