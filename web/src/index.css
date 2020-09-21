@@ -1,0 +1,14 @@
+* {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+
+
+}
+
+body{
+    background: url('./assets/images/simple-codelines.svg'), #2b3137;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

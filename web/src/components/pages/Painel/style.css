@@ -1,0 +1,82 @@
+.Painel {
+    
+    display: block;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid  #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    float: right;
+}
+input {
+    margin-bottom: 15px;
+    display: block;
+    height: 40px;
+    width: 380px;
+    border-radius: 5px;
+    border: 0.1px solid #ccc;
+}
+h1 {
+    display: block;
+}
+
+label{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292e;
+    display: block;
+
+}
+.row-button button {
+    font-size:20px;
+    margin: 10px;
+    padding: 15px;
+    justify-content: center;
+    background-color: #2ebc4f;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+.cancel {
+    background-color: red !important;
+}
+.row-button button:hover{
+    background-color: #1e8f38;
+}
+
+.Cadastro p {
+    background-color: red;
+    color: white;
+    padding: 10px;
+
+}
+
+table {
+    background-color: white;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+thead,
+tr,
+td{
+
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+th {
+    font-size: 20px;
+    margin-left: 30px;
+    margin: 10px;
+    border: 0.1px solid gray;
+    padding: 30px;
+}

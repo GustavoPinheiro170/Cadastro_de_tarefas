@@ -1,0 +1,41 @@
+
+
+.header {
+    display: flex;
+    background-color: #24292e;
+    height: 60px;
+    justify-content: space-between;
+}
+.header nav {
+    position: absolute;
+    right: 0;
+}
+.header li {
+    transition: .2s;
+    margin-top: 10px;
+    display: inline;
+    color: white;
+    margin-right: 50px;
+}
+
+.header ul {
+    margin-top: 15px;
+    float: right;
+}
+
+.header li:hover{
+    color: #fff;
+    opacity: .75;   
+}
+
+.SignUp{
+    border: 0.1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a {
+    text-align: right;
+    color: white;
+    text-decoration: none;
+}

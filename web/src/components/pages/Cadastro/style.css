@@ -1,0 +1,51 @@
+.Cadastro {
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid  #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    height: 100%;
+}
+input {
+    margin-bottom: 15px;
+    display: block;
+    height: 40px;
+    width: 380px;
+    border-radius: 5px;
+    border: 0.1px solid #ccc;
+}
+h1 {
+    display: block;
+}
+
+label{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292e;
+
+}
+button {
+    font-size:1.5rem;
+    padding: 25px;
+    justify-content: center;
+    background-color: #2ebc4f;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+button:hover{
+    background-color: #1e8f38;
+}
+
+.Cadastro p {
+    background-color: red;
+    color: white;
+    padding: 10px;
+
+}
