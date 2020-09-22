@@ -12,3 +12,6 @@ body{
     background-repeat: no-repeat;
 }
 
+button {
+    cursor: pointer;
+}

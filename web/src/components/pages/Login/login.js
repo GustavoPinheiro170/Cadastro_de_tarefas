@@ -8,18 +8,19 @@ function Login(){
 
     const [Email, setEmail] = React.useState('');
     const [senha, setSenha] = React.useState('');
-    const [nome, setNome] = React.useState('');
+   
 
-  
-    
         localStorage.senhaLogin = senha;
         localStorage.emailLogin = Email;
         
 
 
-
-    
-
+        function componentDidMount() {
+            if (typeof window !== 'undefined') {
+                localStorage.nomeLogin = localStorage.getItem('nome');
+                 window.location.href = "http://localhost:3000/Painel";
+            }
+       }
     return(
         <div>
             <Routes>
@@ -29,6 +30,7 @@ function Login(){
                 <h1>Cadastro de Tarefas</h1>
                 <p>Projeto Desenvolvido para teste de conhecimento</p>
             </div>
+
         <div className='Login'>
         <form>
         <span id='Message'></span><br />
@@ -51,7 +53,7 @@ function Login(){
       />
 
     
-        <Link to='/Painel'><button id='buttonSubmit'  type='submit' > Entrar </button></Link>
+        <Link to='/Painel'><button id='buttonSubmit' onClick={componentDidMount}  type='submit' > Entrar </button></Link>
             
         </form>
 

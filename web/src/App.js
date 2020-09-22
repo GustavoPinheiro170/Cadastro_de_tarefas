@@ -1,6 +1,6 @@
 import React from 'react';
 import {UserStorage} from './UserContext';
-import {BrowserRouter, Route, Switch , Link, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch ,  Redirect} from 'react-router-dom';
 import Header from './components/pages/Header/header';
 import Formulario from './components/pages/Cadastro/formulario';
 import Login from './components/pages/Login/login';

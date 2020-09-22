@@ -27,7 +27,7 @@ label{
     color: #24292e;
 
 }
-button {
+.Cadastro button {
     font-size:1.5rem;
     padding: 25px;
     justify-content: center;
@@ -39,13 +39,13 @@ button {
     cursor: pointer;
     transition: .2s;
 }
-button:hover{
+.Cadastro button:hover{
     background-color: #1e8f38;
 }
 
 .Cadastro p {
     background-color: red;
-    color: white;
+    color: white !important;
     padding: 10px;
 
 }

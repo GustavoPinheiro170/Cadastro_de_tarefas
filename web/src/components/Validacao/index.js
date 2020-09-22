@@ -15,11 +15,11 @@ const types = {
 
   },
   nascimento: {
-      regex: /(\d{4})[-.\/](\d{2})[-.\/](\d{2})/,
+      regex: /(\d{4})[-.](\d{2})[-.](\d{2})/,
       message: 'Menores de 12 anos não podem se registrar'
   },
   cpf: {
-      regex: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/,
+      regex: /^(\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}|\d{3}\.?\d{3}\.?\d{3}-?\d{2})$/,
       message : 'Preencha um CPF válido'
   }
 };
@@ -35,7 +35,7 @@ const useForm = (type) => {
 
     const Dtnascimento = value.slice(0, 4);
     const DateNumber = Number(Dtnascimento);
-    const date = new Date;
+    const date = new Date();
     let yearNow = date.getFullYear() - DateNumber;
     if(yearNow <= 12){
         console.log(yearNow);

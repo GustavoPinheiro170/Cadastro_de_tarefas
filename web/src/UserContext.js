@@ -1,18 +1,16 @@
 import React from 'react';
 
-export const UserContext = React.createContext();
 
 
-async function UserLogin() {
-   window.localStorage.getItem('nome');
+export const UserContext = React.createContext(null);
 
-}
+
 
 export const UserStorage = ({children}) => {
-    return (
-        <UserContext.Provider value={{UserLogin}}>
-            {children}
-            </UserContext.Provider>
 
-    )
-}
+ const userName = localStorage.getItem('nomeLogin');
+
+    return  <UserContext.Provider value={userName} >{children} </UserContext.Provider>
+};
+
+

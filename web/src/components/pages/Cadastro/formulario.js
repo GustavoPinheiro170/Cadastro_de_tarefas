@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserHistory} from "react-router";
 import useForm from '../../Validacao/index';
 import Input from '../Form/input';
 import './style.css'
@@ -16,7 +17,11 @@ function Formulario() {
     const [numero, setNumero] = React.useState('');
     
     
-
+    function componentDidMount() {
+      if (typeof window !== 'undefined') {
+           window.location.href = "http://localhost:3000/Login";
+      }
+ }
 
     function saveChange(){
         localStorage.nome = nome;
@@ -35,9 +40,10 @@ function Formulario() {
 
     function handleSubmit(event){
       event.preventDefault();
-      if(nascimento.validate() && senha.validate() && email.validate && nome != '' ){
+      if(nascimento.validate() && senha.validate() && email.validate && nome !== '' ){
         saveChange()
-        alert('Cadastro Realizado com sucesso!')
+        alert('Cadastro Realizado com sucesso!');
+        componentDidMount();
         return true
       }else {
         alert('Favor Preencha todos os campos obrigatórios')
@@ -119,7 +125,7 @@ function Formulario() {
       {...senha}
       />
 
-      <button type='submit' > Cadastrar </button>
+      <button href='/Login' type='submit' > Cadastrar </button>
 
       </form>
 

@@ -32,10 +32,15 @@
     border: 0.1px solid white;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-a {
+.header a {
     text-align: right;
     color: white;
     text-decoration: none;
+}
+.header a:hover{
+    color: white;
+    text-decoration: none !important;
 }

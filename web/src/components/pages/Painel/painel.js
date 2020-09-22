@@ -1,14 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Component } from 'react';
-import Input from '../Form/input';
 import './style.css'
-
-
-const tarefasProps = {
-    title: 'Taferas',
-    subtitle: 'Cadastrar Tarefas : Incluir, Listar, Alterar e Excluir'
-}
 
 const baseUrl =  'http://localhost:3001/tarefa';
 const initialState = {
@@ -17,6 +10,8 @@ const initialState = {
 }
 
 export default class tarefasCrud extends Component {
+
+
 
     validateUser(){
         const user = localStorage.getItem('nome')
@@ -111,17 +106,18 @@ export default class tarefasCrud extends Component {
     renderTable() {
         return (
 
-            <table>
-                <thread>
+            <table className='table'>
+                <thread className="thead-light">
                     <tr>
                         <th>Nome da Tarefa</th>
                         <th>Data de Entrega</th>
                         <th>Data de Conclusão</th>
+
+
                     </tr>
                 </thread>
                 <tbody>
                     {this.renderRows()}
-
                 </tbody>
             </table> 
         );
@@ -134,7 +130,7 @@ export default class tarefasCrud extends Component {
                         <td>{tarefa.nome}</td>
                         <td>{tarefa.dtentrega}</td>
                         <td>{tarefa.dtconclusao}</td>
-                        <td>
+                        <td className='buttons_table'>
                             <button
                              className='edit'
                              onClick={() => this.load(tarefa)}>Editar</button>
@@ -151,9 +147,14 @@ export default class tarefasCrud extends Component {
     }
     render() {
         return (
-            <main >
-                {this.renderForm()}
+            <main className='Painel-grid' >
+                <>
                 {this.renderTable()}
+                
+                </>
+                <>
+                {this.renderForm()}
+                </>
             </main>
         );
     }

@@ -7,7 +7,7 @@ export const isAuthenticated = () => {
         const senhaStorage = localStorage.getItem('senha');
 
 
-        if(localStorage.length == 0){
+        if(localStorage.length === 0){
             return false
             }
 
